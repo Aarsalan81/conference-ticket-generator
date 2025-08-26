@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles/app.css">
+
+  <script src="js/script.js" defer></script>
+
+  <title>Conference ticket generator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+
+<body>
+
+  <picture class="background-parent">
+    <source media="(min-width: 64rem)" srcset="assets/images/background-desktop.png">
+    <source media="(min-width: 40rem)" srcset="assets/images/background-tablet.png">
+    <img class="background" src="assets/images/background-mobile.png" alt="background-mobile">
+  </picture>
+
+  <picture class="pattern-lines-parent">
+    <img class="pattern-lines" src="assets/images/pattern-lines.svg" alt="pattern-lines">
+  </picture>
+
+  <picture class="pattern-squiggly-line-parent">
+    <img class="pattern-squiggly-line-top" src="assets/images/pattern-squiggly-line-top.svg"
+      alt="pattern-squiggly-line-top">
+  </picture>
+
+  <picture class="pattern-squiggly-line-bottom-parent">
+    <source media="(min-width: 64rem)" srcset="assets/images/pattern-squiggly-line-bottom-desktop.svg">
+    <img class="pattern-squiggly-line-bottom" src="assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt="pattern-squiggly-line-bottom">
+  </picture>
+
+  <div class="container">
+
+    <header>
+      <img src="assets/images/logo-full.svg" alt="logo">
+      <h1 class="header-desc" style="margin-top: 2rem;">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p class="header-text">Secure your spot at next year's biggest coding conference.</p>
+    </header>
+    <!-- Form starts -->
+
+    <form>
+      <section class="upload-section">
+        <p>Upload Avatar</p>
+        <label for="upload" class="upload-label">
+          <div class="upload-wrapper">
+            <input type="file" id="upload">
+            <span class="parent-icon-upload">
+              <img src="assets/images/icon-upload.svg" alt="upload-logo">
+            </span>
+          </div>
+          <div class="load-avatar">
+            <img src="" alt="avatar">
+          </div>
+          <p class="drag-and-drop-desc">Drag and drop or click to upload</p>
+          <div class="upload-photo-btns">
+            <button class="remove-btn">Remove image</button>
+            <label for="change-btn" class="change-btn">Change image</label>
+            <input type="file" id="change-btn" class="input-change-btn" style="display: none;">
+          </div>
+        </label>
+        <small class="upload-des">Upload your photo (JPG or PNG, max size: 500KB).</small>
+        <small class="error-upload">
+          <img src="assets/images/icon-info.svg" alt="info">
+          file too large. please upload a
+          photo under 500KB
+        </small>
+        <!-- <input type="file" id="upload" ondrop=""> -->
+      </section>
+
+      <section class="name-section">
+        <label for="name">Full Name</label>
+        <div class="name-wrapper">
+          <input type="text" class="focus" id="name" autofocus>
+          <small class="full-name-error">
+            <img src="assets/images/icon-info.svg" alt="info">
+            full name is empty
+          </small>
+        </div>
+      </section>
+
+      <section class="email-section">
+        <label for="email">Email Address</label>
+        <div class="email-wrapper">
+          <input type="email" class="focus" id="email" placeholder="example@email.com">
+          <small class="email-error">
+            <img src="assets/images/icon-info.svg" alt="info">
+            please enter a valid email address.
+          </small>
+        </div>
+      </section>
+
+      <section class="GitHub-section">
+        <label for="GitHub">GitHub Username</label>
+        <div class="GitHub-wrapper">
+          <input type="text" class="focus" id="GitHub" placeholder="your username">
+          <small class="github-error">
+            <img src="assets/images/icon-info.svg" alt="info">
+            please enter a valid Username.
+          </small>
+        </div>
+      </section>
+
+      <button class="focus footer-button">Generate My Ticket</button>
+
+    </form>
+
+    <!-- Form ends -->
+
+
+    <!-- Generated tickets starts -->
+
+    <section class="Generated-ticket">
+      <h1>Congrats, <span class="gradient-text"></span>! Your ticket is ready.</h1>
+      <p>We've emailed your ticket to <span class="email" style="color: hsl(7, 71%, 60%);"></span> and will send updates
+        in the run
+        up
+        to the event.</p>
+
+      <div class="ticket-wrapper">
+        <div>
+          <img class="ticket-background" src="assets/images/pattern-ticket.svg" alt="background">
+          <div class="top-ticket">
+            <img src="assets/images/logo-full.svg" alt="logo">
+            <p class="date">Jan 31, 2025 / Austin, TX</p>
+          </div>
+
+          <div class="ticket-buttom">
+            <div class="person-img-parent">
+              <img class="person-img" src="" alt="img">
+            </div>
+            <div class="info">
+              <p class="person-name"></p>
+              <div class="gitHub-userName">
+                <img src="assets/images/icon-github.svg" alt="GitHub">
+                <a href="" target="_blank"></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- Generated tickets ends -->
+  </div>
+
+</body>
+
+</html>
